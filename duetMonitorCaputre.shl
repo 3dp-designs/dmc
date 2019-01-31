@@ -88,7 +88,7 @@ while [ 1 ]; do
   # if the current status is idle and the previous status was printing we just finished a print
   if [ "$CURRENT_STATUS" == 'I' ] && [ "$PREVIOUS_STATUS" == 'P' ]; then
    # let the user know!
-   notify -t "$CURRENT_STATUS_DESCRIPTION $FILE" >> /dev/null
+   #notify -t "$CURRENT_STATUS_DESCRIPTION $FILE" >> /dev/null
    # make sure we have some snapshots
    FILE_COUNT=$(ls -1 "$SNAPSHOT_DIRECTORY" | wc -l);
    if [ ! "$FILE_COUNT" = '0' ]; then
