@@ -12,6 +12,7 @@
 # notes:
 #  I am a PHP guy not a shell scripting guy. The ; at the end of lines is no needed but I am used them.
 #  the system must have jq, curl, ffmpeg, nofity and wget installed for this to run!
+# this is a change!, will it push?
 
 
 # Define these variables to match your use
