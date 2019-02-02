@@ -98,7 +98,7 @@ while [ 1 ]; do
     # rename all of the files with WAY too many 0's for padding
     ls *.jpeg | cat -n | while read i f; do mv "$f" `printf "image-%015d.jpeg" "$i"`; done
     # convert the file to a video
-    ffmpeg -r 1/"$VIDEO_FRAMERATE" -i image-%015d.jpeg -c:v libx264 -vf fps=25 -pix_fmt yuv420p "$FILE.mp4";
+    ffmpeg -r 1/"$VIDEO_FRAMERATE" -i image-%015d.jpeg -c:v libx264 -vf fps=25 -pix_fmt yuv420p "$FILE$TIME_STAMP.mp4";
     # remove the image files when we are done
     /bin/rm image-*.jpeg;
     # jump up one directory so we get back to were we started
